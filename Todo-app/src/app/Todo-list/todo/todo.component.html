@@ -21,7 +21,11 @@
         (change)="getCompleted(todo._id)"
         [checked]="todo.completed"
       />
-      {{ todo.name }}
+      <span
+        [style.text-decoration]="todo.completed ? 'line-through' : 'none'"
+        [style.opacity]="todo.completed ? '0.8' : '1'"
+        >{{ todo.name }}</span
+      >
       } @if(display === 2){
       <input
         type="checkbox"
