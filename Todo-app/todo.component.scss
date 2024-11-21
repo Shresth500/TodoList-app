@@ -1,0 +1,215 @@
+.width-50 {
+  width: 50%;
+}
+
+.block {
+  display: block;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.no-border {
+  border: 0;
+}
+
+.delete {
+  opacity: 0.8;
+}
+
+.delete:hover {
+  opacity: 1;
+  background-color: #ff0000;
+}
+
+.inline-display {
+  display: inline;
+}
+.box {
+  width: 40%;
+  border: 1px solid black;
+  padding: 0px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  position: relative;
+}
+
+.box-block {
+  width: 40%;
+  padding: 0px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  right: -30%;
+}
+
+.box-block-button {
+  padding: 0px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-button {
+  padding: 0px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  position: relative;
+}
+
+.d-flex-alignment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Optional: add padding around the flex container */
+}
+
+.d-flex input {
+  margin-right: 10px; /* Adds space between checkbox and text */
+}
+
+.d-flex span {
+  text-align: center;
+}
+
+.padding-left {
+  padding-left: 20px;
+}
+
+.center-container {
+  position: relative;
+  right: -30%;
+}
+
+.center-content {
+  border: 1px solidblack;
+}
+
+.left-shift {
+  right: 50%;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* Makes the checkbox circular */
+  appearance: none; /* Removes default styling in most browsers */
+  background-color: white;
+  border: 1px solid black; /* Border color */
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: black; /* Background color when checked */
+  border-color: black; /* Border color when checked */
+}
+
+/* Add checkmark when checked */
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%; /* Makes the checkmark circular */
+}
+/* app.component.css */
+.checkbox-container {
+  position: relative;
+  display: inline-block;
+}
+
+.clear-icon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  font-size: 18px;
+  color: #ff0000; /* Red color for the cross icon */
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+.checkbox-container:hover .clear-icon {
+  display: block; /* Show the icon when the checkbox is hovered */
+}
+
+input[type="checkbox"]:checked + .clear-icon {
+  display: block; /* Show the icon when the checkbox is checked */
+}
+
+.completed {
+  opacity: 0.8;
+  position: relative;
+}
+.completed:hover {
+  background-color: lightgreen;
+}
+
+.active {
+  opacity: 0.8;
+  border: 0px;
+  position: relative;
+}
+
+.active:hover {
+  background-color: lightblue;
+}
+
+.all {
+  opacity: 0.8;
+  border: 0;
+  position: relative;
+}
+
+.all:hover {
+  background-color: cyan;
+}
+
+.todo {
+  opacity: 0.9;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo:hover {
+  background-color: aquamarine;
+  opacity: 1;
+}
+@media (min-width: 765px) {
+  .box-block-button {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 764px) {
+  .box-button {
+    display: none;
+    visibility: hidden;
+  }
+}
