@@ -1,0 +1,154 @@
+<div class="accordion" id="accordionExample">
+  <input
+    type="text"
+    name="todo-component"
+    id="todo-input"
+    placeholder="What needs to be done?"
+    autofocus
+    (keydown)="onFunction($event)"
+    (blur)="onFunction($event)"
+    [(ngModel)]="filterKey"
+  />
+</div>
+<!--
+<div ngbAccordion class="center-container">
+  @for(todo of filteredtodoList;track todo){
+  <div ngbAccordionItem class="width-50 center-content">
+    <h2 ngbAccordionHeader>
+      @if(display === 3){
+      <input
+        type="checkbox"
+        (change)="getCompleted(todo._id)"
+        [checked]="todo.completed"
+      />
+      {{ todo.name }}
+      } @if(display === 2){
+      <input
+        type="checkbox"
+        (change)="getCompleted(todo._id)"
+        [checked]="todo.completed"
+        *ngIf="!todo.completed"
+      />
+      {{ todo.name }}
+      } @if(display === 1){
+      <input
+        type="checkbox"
+        (change)="getCompleted(todo._id)"
+        [checked]="todo.completed"
+        *ngIf="todo.completed"
+      />
+      {{ todo.name }}
+      }
+    </h2>
+  </div>
+  }
+</div>
+-->
+
+<div class="center-container">
+  @for(todo of filteredtodoList;track todo){
+  <div class="box">
+    <h4 class="d-flex-alignment todo">
+      @if(display === 3){
+      <input
+        type="checkbox"
+        (change)="getCompleted(todo._id)"
+        [checked]="todo.completed"
+      />
+      {{ todo.name }}
+      } @if(display === 2){
+      <input
+        type="checkbox"
+        (change)="getCompleted(todo._id)"
+        [checked]="todo.completed"
+        *ngIf="!todo.completed"
+      />
+      <span>{{ todo.name }}</span>
+      } @if(display === 1){
+      <input
+        type="checkbox"
+        (change)="getCompleted(todo._id)"
+        [checked]="todo.completed"
+        *ngIf="todo.completed"
+      />
+      {{ todo.name }}
+      }
+      <button class="cursor-pointer no-border delete">
+        <fa-icon [icon]="faTrash" (click)="onDelete(todo._id)"></fa-icon>
+      </button>
+    </h4>
+  </div>
+  }
+</div>
+<div class="box-block">
+  <div class="btn-group box-button" role="group">
+    <p></p>
+    <button
+      type="button"
+      class="btn all block"
+      type="submit"
+      (click)="getAll(3)"
+    >
+      All
+    </button>
+    <button
+      type="button"
+      class="btn active block"
+      type="submit"
+      (click)="getAll(2)"
+    >
+      Active
+    </button>
+    <button
+      type="button"
+      class="btn completed block"
+      type="submit"
+      (click)="getAll(1)"
+    >
+      Completed
+    </button>
+    <button
+      type="button"
+      class="btn delete block"
+      type="submit"
+      (click)="getAll(4)"
+    >
+      Delete All
+    </button>
+  </div>
+  <div class="btn-group box-block-button" role="group">
+    <p></p>
+    <button
+      type="button"
+      class="btn all block"
+      type="submit"
+      (click)="getAll(3)"
+    >
+      All
+    </button>
+    <button
+      type="button"
+      class="btn active block"
+      type="submit"
+      (click)="getAll(2)"
+    >
+      Active
+    </button>
+    <button
+      type="button"
+      class="btn completed block"
+      type="submit"
+      (click)="getAll(1)"
+    >
+      Completed
+    </button>
+    <button
+      type="button"
+      class="btn delete block"
+      type="submit"
+      (click)="getAll(4)"
+    >
+      Delete All
+    </button>
+  </div>
+</div>

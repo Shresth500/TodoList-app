@@ -1,0 +1,10 @@
+.heading-font {
+  margin-top: 0.5%;
+  font-size: 80px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#todo-input:focus {
+  outline: 2px solid rgb(237, 52, 52); /* Change the outline color to blue */
+  outline-offset: 2px; /* Optional: Adjust the space between the input and the outline */
+}
